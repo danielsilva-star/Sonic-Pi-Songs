@@ -1,16 +1,11 @@
-# Sonic-Pi-Songs
-Sonic Pi
 # Welcome to Sonic Pi
-sample "C:/Users/daniel_silva/Downloads/After Dark (Instrumental).mp3"
-
-use_bpm 122
-use_synth :piano
-live_loop :minha_musica do
+#sample "C:/Users/daniel_silva/Downloads/After Dark (Instrumental).mp3"
+define :bass_pattern do
   play :c2
   sleep 0.5
   play :c2
   sleep 0.5
-  play :r
+  play :r # rest
   sleep 0.5
   play :g2
   sleep 0.5
@@ -24,17 +19,27 @@ live_loop :minha_musica do
   sleep 0.5
 end
 
-sleep 18
+use_bpm 122
+use_synth :piano
+sample "C:/Users/daniel_silva/Downloads/After Dark (Instrumental).mp3"
+sleep 58
+live_loop :minha_musica do
+  bass_pattern
+end
+sleep 28
 
-live_loop :beats1 do
-  sample "C:/Users/daniel_silva/Downloads/Drummer.mp3"
-  sleep 4
+sample  "C:/Users/daniel_silva/Downloads/After Darktreis.mp3"
+
+sleep 28
+
+live_loop :minha_musica2 do
+  sample "C:/Users/daniel_silva/Downloads/Music.mp3"
+  sleep 58
 end
 
-sleep 22
+sleep 58
 
-live_loop :beats2 do
-  sample
-  sleep 4
-  
+live_loop :pulse_kick do
+  sample :bd_tek, amp: 0.8, lpf: 90
+  sleep 1
 end
