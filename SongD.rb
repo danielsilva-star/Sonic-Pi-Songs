@@ -22,10 +22,20 @@ end
 use_bpm 122
 use_synth :piano
 sample "C:/Users/daniel_silva/Downloads/After Dark (Instrumental).mp3"
+
 sleep 58
+
 live_loop :minha_musica do
   bass_pattern
 end
+
+sleep 18
+
+live_loop :pulse_kick do
+  sample :bd_tek, amp: 0.8, lpf: 90
+  sleep 1
+end
+
 sleep 28
 
 sample  "C:/Users/daniel_silva/Downloads/After Darktreis.mp3"
